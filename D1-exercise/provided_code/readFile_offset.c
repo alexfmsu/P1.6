@@ -4,7 +4,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include "mpi.h"
-#define FILESIZE 80 
+#define FILESIZE 64 //80 
 
 int main(int argc, char **argv){
 

@@ -3,8 +3,8 @@
  */
 #include<stdio.h>
 #include<stdlib.h>
-#include "mpi.h"
-#define FILESIZE 256 
+#include "mpi.h" 
+#define FILESIZE 64 //256 
 int main(int argc, char **argv){
 
 	int i,rank, size, bufsize, nints,offset;
