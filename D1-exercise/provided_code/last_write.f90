@@ -5,14 +5,15 @@ PROGRAM write_using_set_view
 
  use mpi
     
- integer :: ierr, i, myrank, thefile
+ integer :: ierr, i, myrank, thefile, NPE
  integer, parameter :: BUFSIZE=4
  integer, dimension(BUFSIZE) :: buf
  integer(kind=MPI_OFFSET_KIND) :: disp
- integer mydata
+ integer :: myvec
 
  call MPI_INIT(ierr)
  call MPI_COMM_RANK(MPI_COMM_WORLD, myrank, ierr)
+ call MPI_COMM_SIZE(MPI_COMM_WORLD, NPE, ierr)
  do i = 1, BUFSIZE
     buf(i) = myrank * 10 + i
  enddo
@@ -21,25 +22,19 @@ PROGRAM write_using_set_view
                    MPI_MODE_WRONLY + MPI_MODE_CREATE, &
                    MPI_INFO_NULL, thefile, ierr)
 
- call MPI_TYPE_CONTIGUOUS(BUFSIZE, MPI_INTEGER, mydata, ierr)
- call MPI_TYPE_COMMIT(mydata, ierr)
- 
- !call MPI_TYPE_SIZE(MPI_INTEGER, intsize,ierr)
  call MPI_TYPE_SIZE(MPI_INTEGER, intsize, ierr)
+
+ call MPI_TYPE_VECTOR(2, 2, 8, MPI_INTEGER, myvec, ierr)
+ call MPI_TYPE_COMMIT(myvec, ierr)
+
  disp = myrank * BUFSIZE * intsize
 
  call MPI_FILE_SET_VIEW(thefile, disp, MPI_INTEGER, &
-                       mydata, 'native', &
+                       myvec, 'native', &
                        MPI_INFO_NULL, ierr)
- !call MPI_FILE_SET_VIEW(thefile, disp, MPI_INTEGER, &
- !                      MPI_INTEGER, 'native', &
- !                      MPI_INFO_NULL, ierr)
 
- call MPI_FILE_WRITE(thefile, buf, 1, mydata, & !BUFSIZE, MPI_INTEGER, &
+ call MPI_FILE_WRITE(thefile, buf, BUFSIZE, MPI_INTEGER, &
                        MPI_STATUS_IGNORE, ierr)
-
- !call MPI_FILE_WRITE(thefile, buf, BUFSIZE, MPI_INTEGER, &
- !                      MPI_STATUS_IGNORE, ierr)
 
  call MPI_FILE_CLOSE(thefile, ierr)
 
