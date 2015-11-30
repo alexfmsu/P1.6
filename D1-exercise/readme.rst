@@ -1,5 +1,5 @@
-D1-exercise1
 ============
+D1-exercise1
 ============
 
 1 - writeFile_offset.c and readFile_offset.c
@@ -74,8 +74,8 @@ D1-exercise1
    (hint: use MPI_TYPE_VECTOR)
 
 
-4 MPI_SubArray.c  
-==================
+4 MPI_SubArray.c (Optional) 
+===========================
 
 1. Compile and run the MPI_SubArray.c code. The code is set now to run on a grid of 2x3 processes, and using a global matrix of 8x15. The code can
    just use a matrix such that the number of rows that is a multiple of the number of rows in the grid, and the number of columns that is multiple of the number of columns in the grid.
@@ -87,7 +87,3 @@ D1-exercise1
    This is the expected output for a matrix with 10 rows and 17 columns, on a process grid with
    3 rows and 5 columns. Your code should be able to produce this file, with the above parameters.
 
-5 - MPI_hints.c
-===============
-
-1. Compile and run MPI_Hints.c  on different platform, probing different implementations
