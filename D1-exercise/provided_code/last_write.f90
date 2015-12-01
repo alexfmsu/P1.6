@@ -27,7 +27,7 @@ PROGRAM write_using_set_view
  call MPI_TYPE_VECTOR(2, 2, 8, MPI_INTEGER, myvec, ierr)
  call MPI_TYPE_COMMIT(myvec, ierr)
 
- disp = myrank * BUFSIZE * intsize
+ disp = myrank * BUFSIZE / 2 * intsize
 
  call MPI_FILE_SET_VIEW(thefile, disp, MPI_INTEGER, &
                        myvec, 'native', &
