@@ -21,8 +21,8 @@ group2
 To connect, from elcid cluster
 ::
   
-  ssh marvin.elab -p 33022 -l ubuntu  (connects to hadoop-name001)
-  ssh marvin.elab -p 33023 -l ubuntu (connects to hadoop-jobtracker001)
+  ssh marvin.elab -p 55022 -l ubuntu  (connects to hadoop-name001)
+  ssh marvin.elab -p 55023 -l ubuntu (connects to hadoop-jobtracker001)
 
 
 group3
@@ -34,5 +34,5 @@ group3
 To connect, from elcid cluster
 ::
   
-  ssh marvin.elab -p 55022 -l ubuntu  (connects to hadoop-name001)
-  ssh marvin.elab -p 55023 -l ubuntu (connects to hadoop-jobtracker001)
+  ssh marvin.elab -p 33022 -l ubuntu  (connects to hadoop-name001)
+  ssh marvin.elab -p 33023 -l ubuntu (connects to hadoop-jobtracker001)
