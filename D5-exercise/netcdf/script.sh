@@ -1,6 +1,6 @@
 #!/bin/bash
 
-data=data_down.nc #file in which are stored the dowloaded data
+data=data_down.nc.old #file in which are stored the dowloaded data
 namef=test
 ext=.nc
 sec_ext=s.nc
@@ -32,10 +32,10 @@ do
     
     while [ $count -le 10 ]
     do
-	/usr/bin/time -p -o $tmp_file ncdump $name > $trash
+	/usr/bin/time -p -o $tmp_file ncdump $name > /dev/null #$trash
 	cat $tmp_file | grep user | awk '{print $2}' >> timing.dat
 
-	/usr/bin/time -p -o $tmp_file ncdump $sec_name > $trash
+	/usr/bin/time -p -o $tmp_file ncdump $sec_name > /dev/null #$trash
 	cat $tmp_file | grep user | awk '{print $2}' >> s_timing.dat
 
 	# echo $count
