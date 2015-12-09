@@ -24,15 +24,15 @@ for i in range(4):
 #
 # Write data
 #
-print "Writing data..."
+print("Writing data...")
 dataset[...] = data
 #
 # Read data back and print it.
 #
-print "Reading data back..."
+print("Reading data back...")
 data_read = dataset[...]
-print "Printing data..."
-print data_read
+print("Printing data...")
+print(data_read)
 #
 # Close the file before exiting
 #
