@@ -35,6 +35,7 @@ RESULTS
 The first obtained results are the ones referring to a file with original size of 3 MB. The following plot shows the size of the compresses file as a function of the compression factor:
 
 .. image:: size_comparison.png
+   :height: 80px
    :scale:  50%
    :alt: Size comparison for compressed files
 
