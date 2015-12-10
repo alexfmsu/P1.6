@@ -41,13 +41,33 @@ The first obtained results are the ones referring to a file with initial size of
    :alt: Size comparison for compressed files
    :align: center
 	   
-As expected, the size of the shuffled files is less then the other. The following plot shows the time needed to decompdess the file as a function of the compression factor:
+As expected, the size of the shuffled files is less then the other. The following plot shows the time needed to decompress the file as a function of the compression factor:
 
 .. image:: time_comparison.png
+   :height: 60px
+   :width: 60px
+   :scale:  50%
+   :alt: Time needed to decompress the file
+   :align: center
+
+This behavior is not what we are expected: we expect a time increases with the compression factor. This behavior can be explained with the small dimension of the file.
+
+Indeed, the usage of the file found at the second link, produces the following plots.
+
+.. image:: long_size_comparison.png
    :height: 60px
    :width: 60px
    :scale:  50%
    :alt: Size comparison for compressed files
    :align: center
 
-This behavior is not what we are expected.
+This is for the comparison of the size. The following, instead, is for the time needed to decompress the files:
+
+.. image:: long_time_comparison.png
+   :height: 60px
+   :width: 60px
+   :scale:  50%
+   :alt: Time needed to decompress the file
+   :align: center
+
+This is the expected behavior.
