@@ -1,6 +1,7 @@
 #!/bin/bash
 
-data=data_down.nc.old #file in which are stored the dowloaded data
+# data=data_down.nc.old #file in which are stored the dowloaded data
+data=data_down.nc #file in which are stored the dowloaded data
 namef=test
 ext=.nc
 sec_ext=s.nc
@@ -10,7 +11,7 @@ trash=trash.txt
 for fname in size.dat s_size.dat timing.dat s_timing.dat
 do
     if [ -f $fname ]; then
-	echo $fname found. Erasing..
+	echo $fname found. Removing...
 	rm $fname
     fi
 done
@@ -21,7 +22,7 @@ do
     name=$namef$L$ext
     sec_name=$namef$L$sec_ext
 
-    echo Working on $sec_name
+    echo Working on $name and $sec_name
 
     nccopy -d$L $data $name
     nccopy -d$L -s $data $sec_name
