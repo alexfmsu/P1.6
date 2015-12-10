@@ -35,8 +35,7 @@ RESULTS
 The first obtained results are the ones referring to a file with original size of 3 MB. The following plot shows the size of the compresses file as a function of the compression factor:
 
 .. image:: size_comparison.png
-   :scale:  60%
+   :scale:  70%
    :alt: Size comparison for compressed files
-   :align: middle
 
 As expected, the size of the shuffled compression is less the the other one.
