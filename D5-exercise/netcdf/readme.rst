@@ -38,7 +38,5 @@ The first obtained results are the ones referring to a file with original size o
 
    size_comparison.png
    :alt: Size comparison for compressed files
-   :scale: 70%
-   :align: middle
 
 As expected, the size of the shuffled compression is less the the other one.
