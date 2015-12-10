@@ -11,6 +11,8 @@ trash=trash.txt
 for fname in size.dat s_size.dat timing.dat s_timing.dat
 do
     if [ -f $fname ]; then
+	# checking if the files of the previous run are
+	# removed (since we use the append mode in this script)
 	echo $fname found. Removing...
 	rm $fname
     fi
