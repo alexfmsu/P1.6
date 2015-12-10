@@ -38,5 +38,6 @@ The first obtained results are the ones referring to a file with original size o
    :height: 60px
    :scale:  50%
    :alt: Size comparison for compressed files
-
+   :align: center
+	   
 As expected, the size of the shuffled compression is less the the other one.
