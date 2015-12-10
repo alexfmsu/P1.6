@@ -36,6 +36,7 @@ The first obtained results are the ones referring to a file with original size o
 
 .. image:: size_comparison.png
    :height: 60px
+   :width: 60px
    :scale:  50%
    :alt: Size comparison for compressed files
    :align: center
