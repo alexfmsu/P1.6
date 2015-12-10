@@ -28,3 +28,17 @@ which return the real size of the file in bytes (like in the output of ls -l). I
    ncdump namefile > /dev/null
 
 The redirection of the output to /dev/null allows to measure only the time to decompress the file without taking into account of the time needed to write the output into another file. The measures are done for both the shuffled and non-shuffled files.
+
+RESULTS
+========
+
+The first obtained results are the ones referring to a file with original size of 3 MB. The following plot shows the size of the compresses file as a function of the compression factor:
+
+.. image::
+
+   size_comparison.png
+   :alt: Size comparison for compressed files
+   :scale: 70%
+   :align: middle
+
+As expected, the size of the shuffled compression is less the the other one.
