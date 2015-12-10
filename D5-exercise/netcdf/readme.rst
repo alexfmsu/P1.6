@@ -32,7 +32,7 @@ The redirection of the output to /dev/null allows to measure only the time to de
 RESULTS
 ========
 
-The first obtained results are the ones referring to a file with original size of 3 MB. The following plot shows the size of the compresses file as a function of the compression factor:
+The first obtained results are the ones referring to a file with initial size of 3 MB. The following plot shows the size of the compressed files as a function of the compression factor:
 
 .. image:: size_comparison.png
    :height: 60px
@@ -41,4 +41,13 @@ The first obtained results are the ones referring to a file with original size o
    :alt: Size comparison for compressed files
    :align: center
 	   
-As expected, the size of the shuffled compression is less the the other one.
+As expected, the size of the shuffled files is less then the other. The following plot shows the time needed to decompdess the file as a function of the compression factor:
+
+.. image:: time_comparison.png
+   :height: 60px
+   :width: 60px
+   :scale:  50%
+   :alt: Size comparison for compressed files
+   :align: center
+
+This behavior is not what we are expected.
